@@ -1,0 +1,18 @@
+﻿
+
+@{
+    ViewBag.Title = "Deposit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Deposit</h2>
+
+@using (Html.BeginForm("Deposit", "UserAccount", FormMethod.Post))
+{
+    <p>
+        @Html.TextBox("amount") <br />
+        <input type="submit" value="Deposit funds" />
+    </p>
+} 
+
+<p>@Html.ActionLink("Back", "UserIndex", "UserAccount", new { @class = "btn btn-default" })</p>

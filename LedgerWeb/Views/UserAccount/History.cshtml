@@ -1,0 +1,24 @@
+﻿@model LedgerWeb.Models.UserAccount
+
+@{
+    ViewBag.Title = "History";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>History</h2>
+
+@{ 
+    if (Model.transactionsList.Count == 0)
+    {
+        <p>No transactions have occured yet.</p>
+    }
+    else
+    {
+        foreach(var item in Model.transactionsList)
+        {
+            <li>@item</li>
+        }
+    }
+}
+
+<p>@Html.ActionLink("Back", "UserIndex", "UserAccount", new { @class = "btn btn-default" })</p>

@@ -1,0 +1,26 @@
+﻿@model LedgerWeb.Models.UserAccount
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-bottom: 20px">Welcome to your Account</h2>
+
+<div class="row">
+    <div class="col-md-2">
+        <p>@Html.ActionLink("Deposit", "Deposit", "UserAccount", new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-2">
+        <p>@Html.ActionLink("Withdrawal", "Withdrawal", "UserAccount", new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-2">
+        <p>@Html.ActionLink("Check Balance", "CheckBalance", "UserAccount", new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-2">
+        <p>@Html.ActionLink("Transaction History", "History", "UserAccount", new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-2">
+        <p>@Html.ActionLink("Logout", "Logout", "UserAccount", new { @class = "btn btn-danger btn-large" })</p>
+    </div>
+</div>

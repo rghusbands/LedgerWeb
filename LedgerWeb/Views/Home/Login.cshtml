@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+
+@using (Html.BeginForm("LoggingIn", "UserAccount", FormMethod.Post))
+{
+    <p>
+        Username: @Html.TextBox("Username") <br />
+        Password: @Html.TextBox("Password") <br />
+        <input type="submit" value="Login" />
+    </p>
+} 
+
+
+<p>@Html.ActionLink("Back", "Index", "Home", new { @class = "btn btn-default"})</p>
+

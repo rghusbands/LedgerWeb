@@ -1,0 +1,12 @@
+﻿
+
+@{
+    ViewBag.Title = "CheckBalance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CheckBalance</h2>
+
+<p>Balance: @ViewBag.message</p>
+
+<p>@Html.ActionLink("Back", "UserIndex", "UserAccount", new { @class = "btn btn-default" })</p>
